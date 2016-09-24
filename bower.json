@@ -1,0 +1,21 @@
+{
+  "name": "start-zixdev-com",
+  "description": "",
+  "main": "",
+  "authors": [
+    "badi ifaoui <badi1wow@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.4"
+  }
+}

@@ -1,0 +1,4 @@
+[submodule "src/app/modules/core"]
+	path = src/app/modules/core
+	url = git@gitlab.com:zix-frontend/core.module.git
+

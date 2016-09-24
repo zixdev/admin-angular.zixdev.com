@@ -1,0 +1,65 @@
+@import "vendors/tether";
+
+// Mixins
+@import "data/prefixer";
+@import "data/mixins";
+
+// Variables
+@import "data/colors";
+@import "data/variables-b4";
+@import "data/variables";
+
+//Global
+@import "basic/global";
+
+
+@import "basic/typography";
+@import "basic/animations";
+@import "basic/waves";
+@import "basic/helpers";
+@import "basic/buttons";
+@import "basic/forms-basic";
+@import "basic/cards-basic";
+@import "basic/navbars";
+//@import "basic/hover-effects";
+@import "basic/footer";
+@import "basic/carousels-basic";
+
+@import "advanced/forms-pro";
+@import "advanced/tabs";
+@import "advanced/msc";
+@import "advanced/progress";
+@import "advanced/accordion";
+@import "advanced/buttons-pro";
+@import "advanced/social-buttons";
+@import "advanced/cards-pro";
+@import "advanced/dropdowns-pro";
+//@import "advanced/light-box";
+@import "advanced/side-nav";
+@import "advanced/navbars-pro";
+@import "advanced/carousels-pro";
+@import "advanced/modals-pro";
+@import "advanced/toasts";
+@import "advanced/scrollspy";
+@import "advanced/charts-pro";
+@import "advanced/animations-pro";
+@import "advanced/scrollbar";
+@import "advanced/ecommerce";
+@import "advanced/skins";
+@import "advanced/chips";
+@import "advanced/parallax";
+
+// DATE & TIME PICKERS
+@import "advanced/date_picker/default.scss";
+@import "advanced/date_picker/default.date.scss";
+@import "advanced/date_picker/default.time.scss";
+
+// SECTIONS
+@import "advanced/sections/blog";
+@import "advanced/sections/magazine";
+@import "advanced/sections/pricing";
+@import "advanced/sections/testimonials";
+@import "advanced/sections/features";
+@import "advanced/sections/team";
+@import "advanced/sections/form-sets";
+@import "advanced/sections/templates";
