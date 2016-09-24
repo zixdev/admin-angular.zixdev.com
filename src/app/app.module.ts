@@ -6,23 +6,13 @@ import {RouterModule} from "@angular/router";
 
 import {AppComponent} from "./app.component";
 
-import {
-    HeaderComponent,
-    FooterComponent,
-    HomeBannerComponent
-} from "./client/components";
-import {
-    HomeComponent,
-    ContactUsComponent
-} from "./client/containers";
 import {CoreModule} from "./modules/core/core.module";
 import {AppState} from "./app.service";
+import {HomeComponent} from "./modules/core/containers/home/home.component";
 
 const APP_ROUTES = [
-    {path: '', component: HomeComponent},
-    {path: 'contact-us', component: ContactUsComponent},
 
-
+    {path: '', component: HomeComponent}
 
 ];
 
@@ -35,18 +25,14 @@ const APP_PROVIDERS = [
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent,
-        HeaderComponent,
-        FooterComponent,
-        HomeBannerComponent,
-        ContactUsComponent,
+
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
-        RouterModule.forRoot(APP_ROUTES),
+        RouterModule.forRoot(APP_ROUTES, {useHash: true}),
+        // RouterModule.forRoot(APP_ROUTES),
 
         CoreModule
     ],

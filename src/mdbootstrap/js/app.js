@@ -32,7 +32,6 @@ require('./modules/global');
 require('./modules/smooth-scroll');
 require('./modules/waves');
 require('./modules/rotating-cards');
-require('./modules/wow');
 require('./modules/forms');
 
 
@@ -42,5 +41,5 @@ $(function () {
     $(".button-collapse").sideNav();
 
     // start wow animations
-    window['WOW_INIT'] = new WOW().init();
+
 });
