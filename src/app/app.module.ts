@@ -13,6 +13,7 @@ import {NavBarLeftComponent} from "./components/nav-bar-left/nav-bar-left.compon
 import {NavBarTopComponent} from "./components/nav-bar-top/nav-bar-top.component";
 import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.component";
 import { FooterComponent } from './components/footer/footer.component';
+import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
 
 const APP_ROUTES = [
 
@@ -33,6 +34,7 @@ const APP_PROVIDERS = [
         NavBarRightComponent,
         NavBarLeftComponent,
         FooterComponent,
+        BreadcumbComponent,
     ],
     imports: [
         BrowserModule,
