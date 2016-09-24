@@ -1,9 +1,15 @@
-<header>
+<div id="wrapper">
     <app-nav-bar-left></app-nav-bar-left>
-    <app-nav-bar-top></app-nav-bar-top>
-</header>
 
-<main>
-    <router-outlet></router-outlet>
-</main>
+    <div id="page-wrapper" class="gray-bg">
+        <app-nav-bar-top></app-nav-bar-top>
 
+        <main class="wrapper wrapper-content">
+            <router-outlet></router-outlet>
+        </main>
+
+        <app-footer></app-footer>
+
+    </div>
+
+</div>
