@@ -1,4 +1,4 @@
-<div id="wrapper">
+<div id="wrapper" *ngIf="appState.state.authorized">
     <app-nav-bar-left></app-nav-bar-left>
 
     <div id="page-wrapper" class="gray-bg">
@@ -14,4 +14,8 @@
 
     </div>
 
+</div>
+
+<div style="height: 100%;" *ngIf="!appState.state.authorized">
+    <router-outlet></router-outlet>
 </div>

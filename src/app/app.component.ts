@@ -15,6 +15,10 @@ export class AppComponent {
     ngOnInit() {
         console.info('Current App State => ', this.appState.state);
         this.checkForAuthenticatedUser();
+        if(!this.appState.state.authorized) {
+            console.log('your are not logged in');
+            this.router.navigate(['login']);
+        }
     }
 
 
