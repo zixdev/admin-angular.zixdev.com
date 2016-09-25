@@ -32,6 +32,7 @@ export class AppComponent {
             this.authService.getUser()
                 .subscribe(response => {
                     this.appState.set('user', response.user);
+                    this.appState.set('user_permissions', JSON.stringify(response.permissions));
                 }, error => {
                     // TODO:: notify the user that he been logged out.
                     // Destroy token
