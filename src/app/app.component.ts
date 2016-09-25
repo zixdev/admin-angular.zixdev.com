@@ -40,6 +40,7 @@ export class AppComponent {
                     // set authorized in app state to false
                     this.appState.set('authorized', false);
                     this.appState.set('user', {});
+                    this.appState.set('user_permissions', {});
                     this.router.navigate(['auth', 'login']);
                 });
         }

@@ -15,6 +15,7 @@ import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.com
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
 import {AuthService} from "./modules/core/services/auth.service";
+import { FileUploaderComponent } from './components/file-uploader/file-uploader.component';
 
 const APP_ROUTES = [
 
@@ -37,6 +38,7 @@ const APP_PROVIDERS = [
         NavBarLeftComponent,
         FooterComponent,
         BreadcumbComponent,
+        // FileUploaderComponent,
     ],
     imports: [
         BrowserModule,
