@@ -15,7 +15,6 @@ import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.com
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
 import {AuthService} from "./modules/core/services/auth.service";
-import { FileUploaderComponent } from './components/file-uploader/file-uploader.component';
 
 const APP_ROUTES = [
 
@@ -31,6 +30,17 @@ const APP_PROVIDERS = [
 ];
 
 @NgModule({
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+
+        // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
+        RouterModule.forRoot(APP_ROUTES),
+
+        CoreModule
+    ],
+
     declarations: [
         AppComponent,
         NavBarTopComponent,
@@ -40,15 +50,7 @@ const APP_PROVIDERS = [
         BreadcumbComponent,
         // FileUploaderComponent,
     ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
-        RouterModule.forRoot(APP_ROUTES),
 
-        CoreModule
-    ],
     providers: [
         ...APP_PROVIDERS
     ],
