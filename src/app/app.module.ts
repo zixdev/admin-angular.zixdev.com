@@ -8,17 +8,15 @@ import {AppComponent} from "./app.component";
 
 import {CoreModule} from "./modules/core/core.module";
 import {AppState} from "./app.service";
-import {HomeComponent} from "./modules/core/containers/home/home.component";
 import {NavBarLeftComponent} from "./components/nav-bar-left/nav-bar-left.component";
 import {NavBarTopComponent} from "./components/nav-bar-top/nav-bar-top.component";
 import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.component";
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
-import {AuthService} from "./modules/core/services/auth.service";
 
 const APP_ROUTES = [
 
-    {path: '', component: HomeComponent, canActivate: [AuthService]},
+
 
 
 ];
