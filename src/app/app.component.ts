@@ -36,7 +36,7 @@ export class AppComponent {
                 }, error => {
                     // TODO:: notify the user that he been logged out.
                     // Destroy token
-                    localStorage.removeItem('token');
+                    localStorage.removeItem(environment.JWT_TOKEN);
                     // set authorized in app state to false
                     this.appState.set('authorized', false);
                     this.appState.set('user', {});
