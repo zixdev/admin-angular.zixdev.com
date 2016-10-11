@@ -1,5 +1,4 @@
 import {Component, OnInit} from "@angular/core";
-import {ApiConfig} from "../../config/api.config";
 
 @Component({
     selector: 'app-file-uploader',

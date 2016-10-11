@@ -1,8 +1,8 @@
 import {Component, ViewEncapsulation} from "@angular/core";
 import {AppState} from "./app.service";
 import {AuthService} from "./modules/core/services/auth.service";
-import {ApiConfig} from "./config/api.config";
 import {Router} from "@angular/router";
+import {environment} from "../environments/environment";
 
 @Component({
     selector: 'app-root',
@@ -23,7 +23,7 @@ export class AppComponent {
 
 
     checkForAuthenticatedUser() {
-        const token = localStorage.getItem(ApiConfig.JWT_TOKEN);
+        const token = localStorage.getItem(environment.JWT_TOKEN);
         // If we have a token, consider the user to be signed in.
         if (token) {
             // we need to update application state
