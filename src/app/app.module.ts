@@ -13,10 +13,15 @@ import {NavBarTopComponent} from "./components/nav-bar-top/nav-bar-top.component
 import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.component";
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
+import {HomeComponent} from "./modules/core/containers/home/home.component";
+import {AdminService} from "./modules/core/services/admin.service";
 
 const APP_ROUTES = [
 
-
+    {
+        path: '',
+        component: HomeComponent,
+    }
 
 
 ];
@@ -32,7 +37,6 @@ const APP_PROVIDERS = [
         BrowserModule,
         FormsModule,
         HttpModule,
-
         // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
         RouterModule.forRoot(APP_ROUTES),
 
@@ -46,7 +50,7 @@ const APP_PROVIDERS = [
         NavBarLeftComponent,
         FooterComponent,
         BreadcumbComponent,
-        // FileUploaderComponent,
+        HomeComponent
     ],
 
     providers: [
