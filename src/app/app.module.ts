@@ -12,10 +12,14 @@ import {HomeComponent} from "./modules/core/containers/home/home.component";
 import {NavBarLeftComponent} from "./components/nav-bar-left/nav-bar-left.component";
 import {NavBarTopComponent} from "./components/nav-bar-top/nav-bar-top.component";
 import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.component";
+import { FooterComponent } from './components/footer/footer.component';
+import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
+import {AuthService} from "./modules/core/services/auth.service";
 
 const APP_ROUTES = [
 
-    {path: '', component: HomeComponent}
+    {path: '', component: HomeComponent, canActivate: [AuthService]},
+
 
 ];
 
@@ -26,21 +30,27 @@ const APP_PROVIDERS = [
 ];
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavBarTopComponent,
-        NavBarRightComponent,
-        NavBarLeftComponent,
-    ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
+
         // RouterModule.forRoot(APP_ROUTES, {useHash: true}),
         RouterModule.forRoot(APP_ROUTES),
 
         CoreModule
     ],
+
+    declarations: [
+        AppComponent,
+        NavBarTopComponent,
+        NavBarRightComponent,
+        NavBarLeftComponent,
+        FooterComponent,
+        BreadcumbComponent,
+        // FileUploaderComponent,
+    ],
+
     providers: [
         ...APP_PROVIDERS
     ],

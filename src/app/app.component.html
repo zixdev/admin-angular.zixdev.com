@@ -1,9 +1,21 @@
-<header>
+<div id="wrapper" *ngIf="appState.state.authorized">
     <app-nav-bar-left></app-nav-bar-left>
-    <app-nav-bar-top></app-nav-bar-top>
-</header>
 
-<main>
+    <div id="page-wrapper" class="gray-bg">
+        <app-nav-bar-top></app-nav-bar-top>
+
+        <app-breadcumb></app-breadcumb>
+
+        <main class="row wrapper wrapper-content">
+            <router-outlet></router-outlet>
+        </main>
+
+        <app-footer></app-footer>
+
+    </div>
+
+</div>
+
+<div style="height: 100%;" *ngIf="!appState.state.authorized">
     <router-outlet></router-outlet>
-</main>
-
+</div>
