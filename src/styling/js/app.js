@@ -11,4 +11,5 @@ window['Tether'] = require('../../../bower_components/tether/dist/js/tether.js')
 require('../../../bower_components/bootstrap/dist/js/bootstrap.js');
 require('../../../bower_components/metisMenu/dist/metisMenu.js');
 require('jquery-slimscroll');
+window['Dropzone'] = require('dropzone');
 require('./setup');

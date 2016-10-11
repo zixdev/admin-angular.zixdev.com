@@ -1,15 +1,15 @@
-#image: alpine:latest
-### this task runner should be runned only when pushing to production .
-#pages:
-#  stage: deploy
-#  script:
-#    - echo 'Building Site...'
-#    - mkdir public
-#    - mv dist/* public
-#  artifacts:
-#    paths:
-#    - public
-#
-#  only:
-#  - master
-#
+image: alpine:latest
+## this task runner should be runned only when pushing to production .
+pages:
+  stage: deploy
+  script:
+    - echo 'Building Site...'
+    - mkdir public
+    - mv dist/* public
+  artifacts:
+    paths:
+    - public
+
+  only:
+  - master
+

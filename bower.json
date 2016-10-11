@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "metisMenu": "^2.5.2"
+    "metisMenu": "^2.5.2",
+    "switchery": "^0.8.1"
   }
 }
