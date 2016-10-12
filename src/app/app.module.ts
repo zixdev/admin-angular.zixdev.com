@@ -14,13 +14,14 @@ import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.com
 import { FooterComponent } from './components/footer/footer.component';
 import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
 import {HomeComponent} from "./modules/core/containers/home/home.component";
-import {AdminService} from "./modules/core/services/admin.service";
+import {AuthService} from "./modules/core/services/auth.service";
 
 const APP_ROUTES = [
 
     {
         path: '',
         component: HomeComponent,
+        canActivate: [AuthService]
     }
 
 

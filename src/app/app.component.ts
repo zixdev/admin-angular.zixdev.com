@@ -14,6 +14,7 @@ export class AppComponent {
     ngOnInit() {
         // check if the user is logged in and update the state.
         this.authService.checkForAuthenticatedUser();
+        console.info('mmhhmh');
 
     }
 
