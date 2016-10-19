@@ -1,4 +1,4 @@
-body.zix-background {
+.zix-background {
     background: url(/assets/admin/images/Background.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -6,13 +6,6 @@ body.zix-background {
     background-size: cover;
 }
 
-body {
-    background: url(/assets/admin/images/Background-blank.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 .full-bg-img {
     height: 100%;
     width: 100%;
