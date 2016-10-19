@@ -1,21 +1,17 @@
-<div id="wrapper" *ngIf="appState.state.authorized">
-    <app-nav-bar-left></app-nav-bar-left>
+<div id="wrapper" >
+    <app-nav-bar-left [hidden]="!appState.state.authorized"></app-nav-bar-left>
 
-    <div id="page-wrapper" class="gray-bg">
-        <app-nav-bar-top></app-nav-bar-top>
+    <div [ngClass]="getWrapperClasses()">
+        <app-nav-bar-top [hidden]="!appState.state.authorized"></app-nav-bar-top>
 
-        <app-breadcumb></app-breadcumb>
+        <app-breadcumb [hidden]="!appState.state.authorized"></app-breadcumb>
 
-        <main class="row wrapper wrapper-content">
+        <main [ngClass]="getMainClasses()">
             <router-outlet></router-outlet>
         </main>
 
-        <app-footer></app-footer>
+        <app-footer [hidden]="!appState.state.authorized"></app-footer>
 
     </div>
 
-</div>
-
-<div style="height: 100%;" *ngIf="!appState.state.authorized" class="zix-background">
-    <router-outlet></router-outlet>
 </div>

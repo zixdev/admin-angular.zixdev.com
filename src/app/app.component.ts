@@ -18,5 +18,21 @@ export class AppComponent {
 
     }
 
+    getMainClasses() {
+        return {
+            'row': this.appState.state.authorized,
+            'wrapper': this.appState.state.authorized,
+            'wrapper-content': this.appState.state.authorized,
+            'zix-background': !this.appState.state.authorized,
+        };
+    }
+
+    getWrapperClasses() {
+        return {
+            'page-wrapper':  this.appState.state.authorized,
+            'gray-bg': this.appState.state.authorized,
+
+        };
+    }
 
 }

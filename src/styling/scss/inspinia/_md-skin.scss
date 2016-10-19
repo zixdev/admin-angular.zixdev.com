@@ -187,7 +187,7 @@ body.md-skin {
         background: inherit;
     }
 
-    .pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done #page-wrapper, .pace-done .footer {
+    .pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done .page-wrapper, .pace-done .footer {
         -webkit-transition: all 0.4s;
         -moz-transition: all 0.4s;
         -o-transition: all 0.4s;
@@ -353,7 +353,7 @@ body.md-skin {
         background: #ffffff;
     }
 
-    &.fixed-nav #wrapper.top-navigation #page-wrapper {
+    &.fixed-nav #wrapper.top-navigation .page-wrapper {
         margin-top: 0;
     }
 
@@ -361,11 +361,11 @@ body.md-skin {
         width: 0;
     }
 
-    &.fixed-sidebar.mini-navbar #page-wrapper {
+    &.fixed-sidebar.mini-navbar .page-wrapper {
         margin: 0 0 0 0;
     }
 
-    &.body-small.fixed-sidebar.mini-navbar #page-wrapper {
+    &.body-small.fixed-sidebar.mini-navbar .page-wrapper {
         margin: 0 0 0 0;
     }
 
