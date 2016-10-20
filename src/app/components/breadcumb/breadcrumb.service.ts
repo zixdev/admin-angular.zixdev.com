@@ -41,7 +41,6 @@ export class BreadcrumbService {
         router.data.subscribe(
             (data: any) => {
                 this.setTitle(data.title);
-                this.description = data.description;
             }
         );
     }
