@@ -1,4 +1,4 @@
-import {BrowserModule} from "@angular/platform-browser";
+import {BrowserModule, Title} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
@@ -15,13 +15,21 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
 import {HomeComponent} from "./modules/core/containers/home/home.component";
 import {AuthService} from "./modules/core/services/auth.service";
+import {BreadcrumbService} from "./components/breadcumb/breadcrumb.service";
 
 const APP_ROUTES = [
 
     {
         path: '',
         component: HomeComponent,
-        canActivate: [AuthService]
+        canActivate: [AuthService],
+        data: {
+            title: 'Home',
+            description: 'Admin Dashboard'
+        },
+        // resolve: {
+        //     home: HomeResolver
+        // }
     }
 
 
@@ -30,7 +38,10 @@ const APP_ROUTES = [
 
 // Application wide providers
 const APP_PROVIDERS = [
-    AppState
+    AppState,
+    BreadcrumbService,
+    Title,
+
 ];
 
 @NgModule({
