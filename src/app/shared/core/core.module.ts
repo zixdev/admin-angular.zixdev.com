@@ -10,12 +10,18 @@ const CORE_ROUTES = [
     {
         path: '',
         component: HomeComponent,
-        canActivate: [Services.AuthService]
+        canActivate: [Services.AdminService]
     },
 
     {
         path: 'auth',
         loadChildren: 'app/shared/core/modules/+auth/auth.module#AuthModule',
+    },
+
+    {
+        path: 'system',
+        loadChildren: 'app/shared/core/modules/+system/system.module#SystemModule',
+        canActivate: [Services.AdminService]
     },
 ];
 
