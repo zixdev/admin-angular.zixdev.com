@@ -1,12 +1,16 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import { BreadcumbComponent } from './components/breadcumb/breadcumb.component';
+
+const CORE_ROUTES = [
+
+];
+
 
 @NgModule({
     imports: [
         CommonModule
     ],
-    declarations: [BreadcumbComponent]
+    declarations: []
 })
 export class CoreModule {
 }
