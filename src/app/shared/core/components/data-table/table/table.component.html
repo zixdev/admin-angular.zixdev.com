@@ -1,0 +1,23 @@
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let column of columns ">
+                    {{column.name}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of rows">
+                <td *ngFor="let column of columns" [innerHtml]="getCallBack(column, row, row[column.id])"></td>
+            </tr>
+            <tr *ngIf="!rows.length">
+                <td class="text-center" [attr.colspan]="columns.length">
+                    No Data Found !
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

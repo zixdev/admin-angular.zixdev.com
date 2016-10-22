@@ -3,6 +3,7 @@ import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import * as Services from "./services";
 import { HomeComponent } from './modules/home/home.component';
+import {DataTableModule} from "./components/data-table/data-table.module";
 
 const mapValuesToArray = (obj) => Object.keys(obj).map(key => obj[key]);
 
@@ -30,6 +31,7 @@ const CORE_ROUTES = [
     imports: [
         CommonModule,
         RouterModule.forRoot(CORE_ROUTES),
+        DataTableModule
     ],
     declarations: [HomeComponent],
     providers: [
