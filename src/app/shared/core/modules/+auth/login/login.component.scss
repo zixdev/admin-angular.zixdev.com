@@ -1,0 +1,42 @@
+:host {
+    color: #FFFFFF;
+    font-size: 16px;
+
+    .form-control, .input-group-addon {
+        background-color: transparent;
+        &:focus {
+            border-color: #a21d21 !important;
+        }
+    }
+
+    .container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .btn-primary {
+        background-color: #a21d21;
+        border-color: #a21d21;
+        &:hover, &:focus, &:active {
+            background-color: #db2c31;
+            border-color: #db2c31;
+        }
+    }
+
+    .alert-danger {
+        background-color: transparent;
+        border-color: #a21d21;
+        border-radius: 0;
+        color: #FFFFFF;
+
+    }
+
+    .list-unstyled {
+        min-height: 420px;
+    }
+}
+

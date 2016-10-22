@@ -1,5 +1,18 @@
-<h1>
-    {{title}}
-</h1>
-<app-breadcumb></app-breadcumb>
-<router-outlet></router-outlet>
+<link href="/assets/admin/vendors/font-awesome/css/font-awesome.css" rel="stylesheet">
+<div id="wrapper" >
+    <app-nav-bar-left [hidden]="!appState.state.authorized"></app-nav-bar-left>
+
+    <div [ngClass]="getWrapperClasses()">
+        <app-nav-bar-top [hidden]="!appState.state.authorized"></app-nav-bar-top>
+
+        <app-breadcumb [hidden]="!appState.state.authorized"></app-breadcumb>
+
+        <main [ngClass]="getMainClasses()">
+            <router-outlet></router-outlet>
+        </main>
+
+        <app-footer [hidden]="!appState.state.authorized"></app-footer>
+
+    </div>
+
+</div>

@@ -11,6 +11,7 @@ import {NavBarRightComponent} from "./components/nav-bar-right/nav-bar-right.com
 import {NavBarLeftComponent} from "./components/nav-bar-left/nav-bar-left.component";
 import {FooterComponent} from "./components/footer/footer.component";
 import {BreadcrumbService} from "./components/breadcumb/breadcrumb.service";
+import {AppState} from "./app.service";
 
 const APP_ROUTES = [
 
@@ -19,6 +20,7 @@ const APP_ROUTES = [
 
 // Application wide providers
 const APP_PROVIDERS = [
+    AppState,
     BreadcrumbService
 ];
 

@@ -1,3 +1,64 @@
-<p>
-  login works!
-</p>
+<div class="full-bg-img">
+    <div class="container">
+        <div id="loader-wrapper" *ngIf="form.submitting">
+            <div id="loader"></div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+        <ul *ngIf="!form.submitted" class="list-unstyled">
+            <li>
+                <img class="img-responsive center-block" src="/assets/admin/images/logo.png" alt="Zix Development">
+            </li>
+            <li>
+                <div class="middle-box text-center loginscreen ">
+                    <div>
+                        <p>Login in. To see the admin panel.</p>
+                        <div *ngIf="form.errors && form.errors.message" class="alert alert-danger">
+                            {{form.errors.message}}
+                        </div>
+                        <form class="m-t" (ngSubmit)="login()" #loginForm="ngForm">
+                            <div class="input-group m-b">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </span>
+                                <input placeholder="Email" class="form-control" type="email"
+                                       [(ngModel)]="user.email"
+                                       name="email"
+                                       #email="ngModel"
+                                       class="form-control"
+                                       required
+                                >
+                            </div>
+
+                            <div class="input-group m-b">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-lock" aria-hidden="true"></i>
+                                </span>
+                                <input placeholder="Password" class="form-control" type="password"
+                                       [(ngModel)]="user.password"
+                                       name="password"
+                                       #password="ngModel"
+                                       class="form-control"
+                                       minlength="6"
+                                       maxlength="255"
+                                       required
+                                >
+                            </div>
+
+                            <button [disabled]="form.submitting" type="submit" class="btn btn-primary block full-width m-b">
+                                <i *ngIf="form.submitting" class="fa fa-spinner fa-pulse"></i>
+                                Login
+                            </button>
+
+                        </form>
+                        <p class="m-t"> <small>Zix web app © 2016-2017</small> </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+
+    </div>
+</div>
+
