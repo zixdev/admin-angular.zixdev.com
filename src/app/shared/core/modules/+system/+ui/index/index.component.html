@@ -1,0 +1,69 @@
+<div class="col-lg-12" @routeAnimation>
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Site UI's </h5>
+            <div class="ibox-tools">
+                <a class="btn btn-success" [routerLink]="['add']">
+                    <i class="fa fa-plus"></i>
+                </a>
+                <button class="btn btn-danger" type="button">
+                    <i class="fa fa-trash-o"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="ibox-content">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Uploaded By:</th>
+                        <th>Version </th>
+                        <th>Status </th>
+                        <th>Code Size </th>
+                        <th>Assets Size </th>
+                        <th>Create Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr *ngFor="let ui of uis">
+                        <td>
+                            {{ui.id}}
+                        </td>
+                        <td>
+                            @{{ui.id}}
+                        </td>
+                        <td>
+                            {{ui.version}}
+                        </td>
+                        <td *ngIf="ui.status">
+                            <i class="fa fa-circle text-success" aria-hidden="true"></i>
+                            active
+                        </td>
+                        <td *ngIf="!ui.status">
+                            <i class="fa fa-circle text-danger" aria-hidden="true"></i>
+                            disabled
+                        </td>
+                        <td>
+                            {{ui.code_size}}
+                        </td>
+                        <td>
+                            {{ui.assets_size}}
+                        </td>
+                        <td>
+                            {{ui.created_at}}
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

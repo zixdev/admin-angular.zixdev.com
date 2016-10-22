@@ -1,0 +1,19 @@
+<div class="col-lg-12" @routeAnimation>
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Add to ({{site.name}}) New Ui</h5>
+
+        </div>
+
+        <div class="ibox-content">
+            <div *ngIf="form.errors && form.errors.ui" class="alert alert-danger">
+                {{form.errors.ui}}
+            </div>
+            <form class="dropzone">
+                <div class="fallback">
+                    <input name="file" type="file" multiple />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

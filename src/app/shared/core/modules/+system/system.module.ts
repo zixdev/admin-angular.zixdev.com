@@ -11,6 +11,11 @@ const SYSTEM_ROUTES = [
     {
         path : 'sites',
         loadChildren: 'app/shared/core/modules/+system/+sites/sites.module#SitesModule',
+    },
+
+    {
+        path : 'sites/:id/ui',
+        loadChildren: 'app/shared/core/modules/+system/+ui/ui.module#UiModule',
     }
 ];
 
