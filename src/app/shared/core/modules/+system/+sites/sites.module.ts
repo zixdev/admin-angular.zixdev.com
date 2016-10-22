@@ -4,6 +4,9 @@ import {RouterModule} from "@angular/router";
 import {IndexComponent} from "./index/index.component";
 import {ShowComponent} from "./show/show.component";
 import {CreateComponent} from "./create/create.component";
+import {DataTableModule} from "../../../components/data-table/data-table.module";
+import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 
 const SITES_ROUTES = [
     {
@@ -28,7 +31,10 @@ const SITES_ROUTES = [
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forChild(SITES_ROUTES)
+        FormsModule,
+        HttpModule,
+        RouterModule.forChild(SITES_ROUTES),
+        DataTableModule
     ],
     declarations: [IndexComponent, ShowComponent, CreateComponent]
 })

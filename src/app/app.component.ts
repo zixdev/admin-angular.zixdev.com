@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, ViewEncapsulation} from "@angular/core";
 import {AppState} from "./app.service";
 import {AuthService} from "./shared/core/services/auth.service";
 import {Router} from "@angular/router";
@@ -6,7 +6,8 @@ import {Router} from "@angular/router";
 @Component({
     selector: 'app-root',
     templateUrl: 'app.component.html',
-    styleUrls: ['app.component.scss']
+    styleUrls: ['app.component.scss'],
+    encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
     constructor(private appState: AppState, public authService: AuthService, public router: Router) {}

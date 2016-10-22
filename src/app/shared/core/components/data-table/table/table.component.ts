@@ -1,58 +1,28 @@
-import {Component, OnInit} from "@angular/core";
+import {Component,  Input} from "@angular/core";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
     selector: 'data-table',
     templateUrl: 'table.component.html',
     styleUrls: ['table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableComponent {
+    @Input('columns') columns: any[] = [];
+    @Input('rows') rows: any[] = [];
+    @Input('callbacks') callbacks: any = {};
 
-    public columns: any[] = [];
-    public rows: any[] = [];
-    public callbacks: any = {};
-
-    constructor() {
+    public constructor(public sanitizer: DomSanitizer) {
     }
 
-    public tempSeed() {
-        this.columns.push({
-            id: 'id',
-            name: 'Id',
-            callback: '',
-            attr: ''
-        });
-        this.columns.push({
-            id: 'name',
-            name: 'Name',
-            callback: '',
-            attr: ''
-        });
-        this.columns.push({
-            id: 'actions',
-            name: 'Actions',
-            callback: 'getActions',
-            attr: ''
-        });
 
-
-        this.rows.push({
-            id: 1,
-            name: 'Badi Ifaoui',
-            actions: 'tet'
-        });
-
-        this.callbacks.getActions = (data) => {
-            return `<a href="#">${data.name} </a>   `;
-        };
-
-    }
-
-    public ngOnInit() {
-        this.tempSeed();
-    }
 
     public getCallBack(column: any, row: any, data: string) {
-        return this.callbacks[column.callback] ? this.callbacks[column.callback](row) : data;
+        return this.callbacks[column.callback] ? this.getCompiledHtml(this.callbacks[column.callback](row)) : data;
+    }
+
+    public getCompiledHtml(data) {
+
+        return this.sanitizer.bypassSecurityTrustHtml(data)
     }
 
 }

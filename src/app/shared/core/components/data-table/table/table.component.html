@@ -10,7 +10,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let row of rows">
-                <td *ngFor="let column of columns" [innerHtml]="getCallBack(column, row, row[column.id])"></td>
+                <td *ngFor="let column of columns" class="e2e-inner-html-bound" [innerHtml]="getCallBack(column, row, row[column.id])"></td>
             </tr>
             <tr *ngIf="!rows.length">
                 <td class="text-center" [attr.colspan]="columns.length">
