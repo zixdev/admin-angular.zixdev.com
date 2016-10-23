@@ -7,7 +7,6 @@ import {Router} from "@angular/router";
     selector: 'app-root',
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.scss'],
-    encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
     constructor(private appState: AppState, public authService: AuthService, public router: Router) {}
@@ -15,6 +14,7 @@ export class AppComponent {
     ngOnInit() {
         // check if the user is logged in and update the state.
         this.authService.checkForAuthenticatedUser();
+        console.log(this.appState.state)
     }
 
     getMainClasses() {

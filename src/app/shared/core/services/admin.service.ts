@@ -1,6 +1,5 @@
 import {Injectable} from "@angular/core";
 import {CanActivate, Router} from "@angular/router";
-import {ApiService} from "./api.service";
 import {AppState} from "../../../app.service";
 import {environment} from "../../../../environments/environment";
 
@@ -8,8 +7,7 @@ import {environment} from "../../../../environments/environment";
 export class AdminService implements CanActivate {
 
 
-    constructor(private router: Router, private apiService: ApiService, public appState: AppState) {
-    }
+    constructor(private router: Router, public appState: AppState) {}
 
     canActivate() {
         const isAuth = this.isAuthorize();
